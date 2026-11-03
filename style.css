@@ -1,257 +1,222 @@
 
+/* GENERELT */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: #eeeeee;
     font-family: Arial, sans-serif;
-    color: #222222;
-}
-
-/* HEADER */
-
-.header {
-    width: 100%;
-    background-color: #14532d;
-    padding: 20px;
-    position: relative;
-    border-radius: 0;
-}
-
-.header h1 {
-    color: white;
-    text-align: center;
-    margin: 0 0 20px 0;
-}
-
-.header nav {
-    text-align: center;
-}
-
-.header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
-}
-
-.header nav a:hover {
-    text-decoration: underline;
-}
-
-/* HAMBURGER-MENY */
-
-.meny-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-/* OVERSKRIFTER OG TEKST */
-
-h2 {
-    color: #14532d;
-    text-align: center;
-    margin-top: 40px;
-    border-bottom: 2px solid #14532d;
-    padding-bottom: 10px;
-}
-
-p {
-    text-align: center;
-    font-size: 16px;
+    background-color: #0b1120;
+    color: #f1f5f9;
     line-height: 1.6;
 }
 
-/* FAVORITTLISTE */
+/* HEADER */
+.header {
+    background-color: #111c30;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #26364b;
+}
 
+.header h1 {
+    color: #4ade80;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* NAVIGASJON */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4ade80;
+}
+
+.meny-toggle,
+.hamburger {
+    display: none;
+}
+
+/* HOVEDINNHOLD */
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+/* SEKSJONER */
+section {
+    background-color: #111c30;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    border: 1px solid #26364b;
+}
+
+section h2 {
+    color: #4ade80;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #cbd5e1;
+}
+
+/* FAVORITTLISTE */
 ol {
-    background-color: white;
-    padding: 25px 45px;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding-left: 25px;
+}
+
+ol li {
+    padding: 8px 0;
+    color: #e2e8f0;
 }
 
 /* SPILLERKORT */
-
 .kort-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
-    max-width: 1000px;
-    margin: 30px auto;
 }
 
 .kort {
-    background-color: white;
-    width: 280px;
-    min-width: 0;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
+    background-color: #1e293b;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    border: 1px solid #334155;
+    text-align: center;
 }
 
+.kort:hover {
+    transform: translateY(-6px);
+    border-color: #4ade80;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* SPILLERBILDER */
 .kort img {
     display: block;
     width: 100%;
-    height: 160px;
+    height: 260px;
     object-fit: cover;
     object-position: center top;
-    border-radius: 8px;
+    border: none;
 }
 
+/* SPILLERNAVN OG TEKST */
 .kort h3 {
-    color: #14532d;
+    color: #4ade80;
+    padding: 15px 15px 5px;
 }
 
-img {
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.03);
-}
-
-.kort img:hover {
-    transform: none;
+.kort p {
+    padding: 0 15px 20px;
+    font-size: 14px;
 }
 
 /* FOTBALLBILDE */
-
 .fotballbilde {
     display: block;
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-    margin: 40px auto;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 850px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px auto;
+    border-radius: 12px;
 }
 
 /* LENKER */
-
-a {
-    color: #14532d;
+section a {
+    color: #4ade80;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-/* KNAPPER / DETAILS */
+section a:hover {
+    text-decoration: underline;
+}
 
+/* DETAILS */
 details {
-    max-width: 400px;
-    margin: 15px auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: #1e293b;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+details:hover {
+    border-color: #4ade80;
 }
 
 summary {
-    background-color: #14532d;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    text-align: center;
+    color: #4ade80;
     font-weight: bold;
+    cursor: pointer;
 }
 
 details p {
-    padding: 10px;
+    margin-top: 12px;
 }
 
 /* FOOTER */
-
 footer {
-    width: 100%;
-    background-color: #14532d;
-    color: white;
+    background-color: #111c30;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    border-radius: 0;
-}
-
-footer p {
-    color: white;
-    margin: 0;
+    padding: 25px;
+    color: #94a3b8;
+    border-top: 1px solid #26364b;
+    font-size: 14px;
 }
 
 /* MOBIL */
-
-@media (max-width: 700px) {
-
-    .header h1 {
-        text-align: left;
-        font-size: 23px;
-        padding-right: 45px;
-        margin-bottom: 0;
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 
-    .hamburger {
-        display: block;
-    }
-
-    .header nav {
-        display: none;
-        margin-top: 20px;
-        background-color: white;
-        border-radius: 8px;
-        padding: 10px;
-    }
-
-    .header nav a {
-        color: #14532d;
-        display: block;
-        padding: 12px;
-        margin: 0;
-    }
-
-    .meny-toggle:checked + .hamburger + nav {
-        display: block;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .kort-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 0 15px;
+        grid-template-columns: 1fr;
     }
 
-    .kort {
-        width: 100%;
-        max-width: 350px;
+    section {
+        padding: 25px 20px;
     }
 
-    .kort img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        object-position: center top;
+    .header h1 {
+        font-size: 23px;
     }
 
     .fotballbilde {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        object-fit: contain;
-        padding: 0 10px;
+        height: 280px;
     }
 }
