@@ -1,0 +1,257 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    color: #222222;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    background-color: #14532d;
+    padding: 20px;
+    position: relative;
+    border-radius: 0;
+}
+
+.header h1 {
+    color: white;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.header nav {
+    text-align: center;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* HAMBURGER-MENY */
+
+.meny-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* OVERSKRIFTER OG TEKST */
+
+h2 {
+    color: #14532d;
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 2px solid #14532d;
+    padding-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* FAVORITTLISTE */
+
+ol {
+    background-color: white;
+    padding: 25px 45px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* SPILLERKORT */
+
+.kort-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.kort {
+    background-color: white;
+    width: 280px;
+    min-width: 0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.kort img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+}
+
+.kort h3 {
+    color: #14532d;
+}
+
+img {
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+.kort img:hover {
+    transform: none;
+}
+
+/* FOTBALLBILDE */
+
+.fotballbilde {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+/* LENKER */
+
+a {
+    color: #14532d;
+}
+
+/* KNAPPER / DETAILS */
+
+details {
+    max-width: 400px;
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+summary {
+    background-color: #14532d;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+details p {
+    padding: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    background-color: #14532d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 0;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        text-align: left;
+        font-size: 23px;
+        padding-right: 45px;
+        margin-bottom: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header nav {
+        display: none;
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .header nav a {
+        color: #14532d;
+        display: block;
+        padding: 12px;
+        margin: 0;
+    }
+
+    .meny-toggle:checked + .hamburger + nav {
+        display: block;
+    }
+
+    .kort-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .kort {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .kort img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .fotballbilde {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine fotballfavoritter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mine fotballfavoritter</h1>
+
+        <input type="checkbox" id="meny-toggle" class="meny-toggle">
+        <label for="meny-toggle" class="hamburger">☰</label>
+
+        <nav>
+            <a href="#introduksjon">Introduksjon</a>
+            <a href="#favoritter">Favoritter</a>
+            <a href="#spillere">Spillere</a>
+            <a href="#bilde">Bilde</a>
+            <a href="#knapper">Knapper</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduksjon">
+            <h2>Introduksjon</h2>
+            <p>
+                Fotball er hobbyen min. Jeg liker både å spille fotball
+                og å se på fotballkamper.
+            </p>
+        </section>
+
+        <section id="favoritter">
+            <h2>Mine favorittspillere</h2>
+
+            <ol>
+                <li>Erling Haaland</li>
+                <li>Cristiano Ronaldo</li>
+                <li>Lionel Messi</li>
+            </ol>
+        </section>
+
+        <section id="spillere">
+            <h2>Mine favorittspillere</h2>
+
+            <div class="kort-container">
+
+                <div class="kort">
+                    <img src="haaland.jpg" alt="Bilde av en fotballspiller">
+                    <h3>Erling Haaland</h3>
+                    <p>En av mine favorittspillere.</p>
+                </div>
+
+                <div class="kort">
+                    <img src="ronaldo.jpeg" alt="Bilde av en fotballspiller">
+                    <h3>Cristiano Ronaldo</h3>
+                    <p>En kjent fotballspiller fra Portugal.</p>
+                </div>
+
+                <div class="kort">
+                    <img src="messi.jpeg" alt="Bilde av en fotballspiller">
+                    <h3>Lionel Messi</h3>
+                    <p>En av de beste fotballspillerne.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="bilde">
+            <h2>Fotball</h2>
+            <img class="fotballbilde" src="ball.webp"
+                 alt="En fotball på en grønn fotballbane">
+
+            <p>
+                Les mer om fotball på
+                <a href="https://www.fifa.com" target="_blank">FIFA sin nettside</a>.
+            </p>
+        </section>
+
+        <section id="knapper">
+            <h2>Prøv knappene</h2>
+
+            <details>
+                <summary>Vis en melding</summary>
+                <p>Velkommen til min fotballside!</p>
+            </details>
+
+            <details>
+                <summary>Vis en ny tekst</summary>
+                <p>Fotball er verdens beste sport!</p>
+            </details>
+
+            <details>
+                <summary>Vis eller skjul informasjon</summary>
+                <p>Jeg liker å spille fotball med venner.</p>
+            </details>
+
+            <details>
+                <summary>Vis teller</summary>
+                <p>Dette er en enkel teller som viser tallet 1.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>Laget av meg | Mine fotballfavoritter 2026</p>
+    </footer>
+
+</body>
+</html>
